@@ -4,17 +4,29 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int sum=0;
-	int n;
-	int a;
-	
-	printf("input a number : " );
-	scanf("%i", &n);
 
-	for (a=0; a<=n; a++)
-	 sum = sum + a;
-	printf("the result is %i \n", sum);
+	int b;
+	int a;
+	char c;
+	printf("계산식을 입력하세요 : " );
+	scanf("%i %c %i", &a, &c, &b);
+
+	if (c=='+')
+	 printf("%i + %i = %i" ,a, b, a+b);
+	 
+	else if (c=='-')
+	 printf("%i - %i = %i" ,a, b, a-b);
 	 	
+	else if (c=='*')
+	 printf("%i * %i = %i" ,a, b, a*b);
+	 
+	else 
+	 printf("%i / %i = %i" ,a, b, a/b);
 	}
    
-
+//  switch(c)
+//	{
+//  	case '+':
+//  		result = a+b;
+// 		    break;
+//	}
