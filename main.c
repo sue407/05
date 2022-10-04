@@ -5,28 +5,28 @@
 
 int main(int argc, char *argv[]) {
 
-	int b;
-	int a;
-	char c;
-	printf("계산식을 입력하세요 : " );
-	scanf("%i %c %i", &a, &c, &b);
 
-	if (c=='+')
-	 printf("%i + %i = %i" ,a, b, a+b);
-	 
-	else if (c=='-')
-	 printf("%i - %i = %i" ,a, b, a-b);
-	 	
-	else if (c=='*')
-	 printf("%i * %i = %i" ,a, b, a*b);
-	 
-	else 
-	 printf("%i / %i = %i" ,a, b, a/b);
+	int answer=47;
+	int x;
+	int trial=0;
+	
+	do
+	{
+		printf("guess a number : ");
+		scanf("%i", &x);
+		if (x<answer)
+		{
+		 printf("Low!\n");
+		 trial = trial + 1 ;
 	}
-   
-//  switch(c)
-//	{
-//  	case '+':
-//  		result = a+b;
-// 		    break;
-//	}
+		else
+		{
+		 printf("High!\n");
+		 trial = trial + 1 ; 
+	}
+		 
+	}
+	while (x!=answer);
+	
+	printf("Congratulation! trial : %i \n", trial);
+}
