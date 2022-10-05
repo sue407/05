@@ -19,11 +19,14 @@ int main(int argc, char *argv[]) {
 		 printf("Low!\n");
 		 trial = trial + 1 ;
 	}
-		else
+		else if (x>answer)
 		{
 		 printf("High!\n");
 		 trial = trial + 1 ; 
 	}
+		else
+		 break;
+	
 		 
 	}
 	while (x!=answer);
